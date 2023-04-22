@@ -10,3 +10,4 @@ jobs:
         uses: uptownaravi/verify-commit-message-action/.github/actions/commit-message-validation@main
         with:
           regex: 'JIRA-[0-9]{4,}'
+          
