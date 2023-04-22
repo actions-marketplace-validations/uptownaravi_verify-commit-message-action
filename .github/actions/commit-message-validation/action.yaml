@@ -17,10 +17,11 @@ runs:
       run: |
         echo "commit message validatiion"
         message=$(git log -1 --pretty=%B)
-        if [ echo $message | grep -P "${{ inputs.regex }}" ]
+        echo $message | grep -P "${{ inputs.regex }}" 
+        if [ echo "$?" ]
         then
-           echo "validation sucess"
-        else
            echo "validation failure"
            exit 100
+        else
+           echo "validation sucess"
         fi
