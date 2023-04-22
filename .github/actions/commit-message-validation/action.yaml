@@ -2,7 +2,7 @@ name: "commit meessage check"
 description: "validate your commit messages, eg. check if they have the required story id"
 inputs:
   regex: # id of input
-    description: "pass in the regex that needs to be verified in the commit message"
+    description: "pass in the regex in grep -P that needs to be verified in the commit message"
     required: true
 outputs:
   random-number:
@@ -16,4 +16,5 @@ runs:
       shell: bash
       run: |
         echo "commit message validatiion"
-        git log -1 --pretty=%B
+        git log -1 --pretty=%B | grep -P ${{ inputs.regex }}
+        $?
