@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: actions/commit-message-validation@v1
+        uses: uptownaravi/verify-commit-message-action/.github/actions/commit-message-validation@main
         with:
           regex: 'Mona the Octocat'
