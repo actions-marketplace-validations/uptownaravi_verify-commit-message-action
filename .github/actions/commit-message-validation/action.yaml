@@ -16,5 +16,5 @@ runs:
       shell: bash
       run: |
         echo "commit message validatiion"
-        git log -1 --pretty=%B | grep -P ${{ inputs.regex }}
+        git log -1 --pretty=%B | grep -P "${{ inputs.regex }}"
         $?
