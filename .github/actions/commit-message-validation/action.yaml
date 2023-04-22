@@ -18,4 +18,3 @@ runs:
         echo "commit message validatiion"
         message=$(git log -1 --pretty=%B)
         echo $message | grep -P "${{ inputs.regex }}"
-        $?
