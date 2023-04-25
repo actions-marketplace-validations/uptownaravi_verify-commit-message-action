@@ -17,4 +17,4 @@ runs:
       run: |
         echo "commit message validatiion"
         message=$(git log -1 --pretty=%B)
-        python commitcheck.py "${{ inputs.regex }}" "'$message'"
+        python commitcheck.py "${{ inputs.regex }}" "$message"
