@@ -15,7 +15,7 @@ def commit_check(message, regex):
             raise ValueError(output)
             
     except Exception as e:
-        return('Error: ' + e)
+        return('Error: ' + str(e))
 
 
 parser = argparse.ArgumentParser(description="Commit message validation. Send regex and message to validate")
