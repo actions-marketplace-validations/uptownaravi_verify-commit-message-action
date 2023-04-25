@@ -12,7 +12,7 @@ def commit_check(message, regex):
             print("validation not successful")
             print("pattern " + regex + " is not available in the commit message " + message )
             output = "pattern " + regex + " is not available in the commit message " + message
-            raise ValueError(output)
+            sys.exit(1)
             
     except Exception as e:
         return('Error: ' + str(e))
