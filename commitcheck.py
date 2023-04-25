@@ -1,5 +1,6 @@
 import re
 import argparse
+import sys
 
 def commit_check(message, regex):
 
