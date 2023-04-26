@@ -1,0 +1,20 @@
+name: "commit meessage check"
+description: "validate your commit messages, eg. check if they have the required story id"
+inputs:
+  regex: # id of input
+    description: "pass in the regex in grep -P that needs to be verified in the commit message"
+    required: true
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-number }}
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v3
+    - id: get-the-commit-message
+      shell: bash
+      run: |
+        echo "commit message validatiion"
+        message=$(git log -1 --pretty=%B)
+        python commitcheck.py "${{ inputs.regex }}" "$message"
