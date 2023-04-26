@@ -5,6 +5,12 @@ While we commit our code adding required commit message helps others understand 
 This GitHub Action will help in validating the commit message as per the regex value passed
 The job will pass if the regex matches or exits with return code 1
 
+### Input Variables
+Required:
+
+`regex:` Pattern used to match with the commit message (python re format)
+
+
 ### example use case
 ### adding this action to a workflow file which checks the commit message for jira story id
 ```yaml
