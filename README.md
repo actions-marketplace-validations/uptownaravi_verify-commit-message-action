@@ -11,8 +11,8 @@ Required:
 `regex:` Pattern used to match with the commit message (python re format)
 
 
-### example use case
-### adding this action to a workflow file which checks the commit message for jira story id
+### Example use case
+#### Adding this action to a workflow file which checks the commit message for jira story id
 ```yaml
 on: [push]
 
