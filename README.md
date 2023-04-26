@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: uptownaravi/verify-commit-message-action@1.0
+        uses: uptownaravi/verify-commit-message-action@v2
         with:
           regex: '(?i)jira-[0-9]{3,}'
 ```
