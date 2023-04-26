@@ -11,7 +11,7 @@ The job will pass if the regex matches or exits with return code 1
 on: [push]
 
 jobs:
-  hello_world_job:
+  commit-message-check-job:
     runs-on: ubuntu-latest
     name: commit-message-validation
     steps:
