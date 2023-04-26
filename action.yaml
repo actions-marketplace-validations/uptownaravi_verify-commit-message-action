@@ -1,5 +1,8 @@
 name: "commit meessage check"
 description: "validate your commit messages, eg. check if they have the required story id"
+branding:
+  icon: 'code'
+  color: 'green'
 inputs:
   regex: # id of input
     description: "pass in the regex in grep -P that needs to be verified in the commit message"
